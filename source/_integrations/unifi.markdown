@@ -24,9 +24,9 @@ Home Assistant offers UniFi integration through **Configuration** -> **Integrati
 
 Enter `host address`, `user name` and `password` and then continue to select which `site` you want to connect to Home Assistant. The user needs administrator privileges in order to control POE switches.
 
-### Extra configuration for device tracker
+### Extra configuration for UniFi integration
 
-You can augment the behavior of UniFi device tracker by adding
+You can augment the behavior of UniFi integration by either using options of the controller in HASS gui or by adding
 
 ```yaml
 # Example configuration.yaml entry
@@ -51,7 +51,7 @@ site:
   required: true
   default: None
 block_client:
-  description: A list of Clients MAC Addresses that can be blocked from the network.
+  description: A list of Clients MAC Addresses that will allow control over access to the network.
   type: list
   required: false
   default: None
